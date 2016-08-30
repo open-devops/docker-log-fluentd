@@ -42,7 +42,7 @@ ENV PATH /home/fluent/.gem/ruby/${RUBY_VERSION}/bin:$PATH
 ENV GEM_PATH /home/fluent/.gem/ruby/${RUBY_VERSION}:$GEM_PATH
 
 # Install plugins
-RUN gem install fluent-plugin-elasticsearch fluent-plugin-record-reformer
+# RUN gem install fluent-plugin-elasticsearch fluent-plugin-record-reformer
 
 COPY fluent.conf /fluentd/etc/
 
