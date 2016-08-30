@@ -5,6 +5,8 @@ Fluentd Docker Image for Logging Service of Open DevOps Pipeline.
 - Listen port 24224 for Fluentd forward protocol
 - Store logs with tag docker.** into /fluentd/log/docker.*.log (and symlink docker.log)
 - Store all other logs into /fluentd/log/data.*.log (and symlink data.log)
+- Add ElasticSearch plugin
+- Add Record Reformer plugin
 
 # docker pull
 docker pull devopsopen/docker-log-fluentd
