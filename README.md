@@ -7,6 +7,7 @@ Fluentd Docker Image for Logging Service of Open DevOps Pipeline.
 - Store all other logs into /fluentd/log/data.*.log (and symlink data.log)
 - Add ElasticSearch plugin
 - Add Record Reformer plugin
+- Forward all logs to ElasticSearch
 
 # docker pull
 docker pull devopsopen/docker-log-fluentd
