@@ -9,6 +9,7 @@ MAINTAINER Open DevOps Team <open.devops@gmail.com>
 ENV REFRESHED_AT 2016-08-25
 
 ENV FLUENTD_VERSION 0.14.2
+ENV RUBY_VERSION 2.3.0
 
 RUN apk --no-cache --update add \
                             build-base \
@@ -37,8 +38,11 @@ WORKDIR /home/fluent
 
 # Tell ruby to install packages as user
 RUN echo "gem: --user-install --no-document" >> ~/.gemrc
-ENV PATH /home/fluent/.gem/ruby/2.3.0/bin:$PATH
-ENV GEM_PATH /home/fluent/.gem/ruby/2.3.0:$GEM_PATH
+ENV PATH /home/fluent/.gem/ruby/${RUBY_VERSION}/bin:$PATH
+ENV GEM_PATH /home/fluent/.gem/ruby/${RUBY_VERSION}:$GEM_PATH
+
+# Install plugins
+RUN gem install gem install fluent-plugin-elasticsearch fluent-plugin-record-reformer
 
 COPY fluent.conf /fluentd/etc/
 
@@ -48,4 +52,3 @@ ENV FLUENTD_CONF="fluent.conf"
 EXPOSE 24224 5140
 
 CMD exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins $FLUENTD_OPT
-
