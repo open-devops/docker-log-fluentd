@@ -8,7 +8,7 @@ MAINTAINER Open DevOps Team <open.devops@gmail.com>
 
 ENV REFRESHED_AT 2016-08-25
 
-ENV FLUENTD_VERSION 0.14.2
+ENV FLUENTD_VERSION 0.14.3
 ENV RUBY_VERSION 2.3.0
 
 RUN apk --no-cache --update add \
