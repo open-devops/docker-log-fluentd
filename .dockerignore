@@ -1,8 +1,6 @@
-# Folders
+.idea/
+*.iml
 .git
-
-# Files
-.dockerignore 
 .gitignore
 README.md
 LICENSE 
