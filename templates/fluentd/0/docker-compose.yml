@@ -1,0 +1,3 @@
+#  Fluentd Docker Image for Logging Service
+fluentd:
+  image:  devopsopen/docker-log-fluentd

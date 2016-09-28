@@ -1,0 +1,7 @@
+.catalog:
+  name:  OpenDevOps-Fluentd
+  version:  1.0.0
+  description:  Fluentd Docker Image for Logging Service
+  uuid: #
+  minimum_rancher_version: #
+  questions: #

@@ -1,0 +1,8 @@
+name:  OpenDevOps-Fluentd
+description: |
+   Fluentd Docker Image for Logging Service
+version:  1.0.0
+category:  LOG 
+maintainer:  open.devops
+license:  Apache 2
+projectURL: https://github.com/ open-devops/docker-log-fluentd
